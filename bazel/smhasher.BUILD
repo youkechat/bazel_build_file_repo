@@ -14,7 +14,7 @@ cmake(
     lib_source = ":all",
     out_include_dir = "include",
     out_static_libs = ["libSMHasherSupport.a"],
-    build_data = ["@tbox//bazel:smhasher_postfix"],
+    build_data = ["@bazel_build_file_repo//bazel:smhasher_postfix"],
     #postfix_script = "tree . ; exit 1",
     #postfix_script = "cp $BUILD_TMPDIR/libSMHasherSupport.a $INSTALLDIR/lib && cd $EXT_BUILD_ROOT/external/smhasher && for file in $(ls {,**/}*.h); do cp --parents -rf $file $INSTALLDIR/include; done && cd -",
     #postfix_script = "/bin/bash $EXT_BUILD_ROOT/bazel/smhasher_postfix.sh",

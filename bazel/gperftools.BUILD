@@ -19,7 +19,7 @@ configure_make(
         "--enable-frame-pointers",
         "--disable-libunwind",
     ] + select({
-        "@tbox//bazel:apple": ["AR=/usr/bin/ar"],
+        "@bazel_build_file_repo//bazel:apple": ["AR=/usr/bin/ar"],
         "//conditions:default": [],
     }),
     lib_source = ":all",
