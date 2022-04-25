@@ -63,7 +63,10 @@ genrule(
     name = "openssl-build",
     srcs = glob(
         ["**/*"],
-        exclude = ["bazel-*"],
+        exclude = [
+          "bazel-*",
+          "include/openssl/opensslconf.h",
+        ],
     ),
     outs = [
         "libcrypto.a",
